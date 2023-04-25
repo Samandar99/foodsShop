@@ -7,7 +7,25 @@ const closeDrawer = document.querySelector('.close');
 const overlay = document.querySelector('.isActiveoverlay');
 const card_btn = document.querySelectorAll('.card-btn');
 const openCart = document.querySelector('.cart');
+const was_cart = document.querySelector('.iswas-cart');
+const card__price = document.querySelectorAll('.card__price');
+let cart__count = document.querySelector('.cart__count');
 
+
+
+card_btn.forEach((item) => {
+    item.addEventListener('click', () => {
+        was_cart.classList.remove('iswas-cart')
+        was_cart.classList.add('was-cart');
+        setTimeout(() => {
+            was_cart.classList.add('iswas-cart');
+        }, 1000);
+        card__price.forEach((ite) => {
+           console.log(ite);
+        })
+
+    })
+})
 
 // card_btn.forEach((item) => {
 //     item.addEventListener('click', () => {
@@ -21,7 +39,7 @@ const openCart = document.querySelector('.cart');
 // })
 
 openCart.addEventListener('click', () => {
-    
+
     overlay.classList.add('overlay')
     drawer.classList.add('drawer')
     drawer.classList.remove('drawerActive')
