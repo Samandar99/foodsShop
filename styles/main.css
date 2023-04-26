@@ -23,7 +23,7 @@ body {
 .search-deliver {
   border: none;
   outline: none;
-
+  background: transparent;
   width: 100%;
 }
 
@@ -36,6 +36,7 @@ body {
   align-items: center;
   gap: 5px;
   padding: 14px 8px;
+ 
   margin-left: 32px;
 }
 
@@ -269,7 +270,7 @@ opacity: none;
 
 .drawer {
   position: fixed;
-  width: 425px ;
+  max-width: 425px;
   height: 100vh;
   right: 0;
   background-color: #fff;
@@ -424,6 +425,7 @@ opacity: none;
     font-size: 14px;
   }
 
+  
   .search__name {
     color: #191919;
     font-size: 10px;
@@ -449,5 +451,14 @@ opacity: none;
     gap: 5px;
     padding: 0px 14px !important;
     border-radius: 4px;
+  }
+
+  .send-btn {
+    background: #ff7010;
+    border-radius: 6px;
+    border: none;
+    padding: 13px 14px;
+    color: #fff;
+    font-size: 13px;
   }
 }
